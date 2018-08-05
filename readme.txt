@@ -1,7 +1,7 @@
 //+------------------------------------------------------------------+
 //| Module Name: PannableMenu                                        |
 //| Module Purpose: make your animations cool                        |
-//| Function: manage set the leftcomp and set the func to get back   |
+//| Function: implement a horizontal swiping behavior                |
 //+------------------------------------------------------------------+
 
 /********************************************************************/
@@ -12,14 +12,20 @@
 /*        lockGesture               -> true/false if u wanna lock   */
 /********************************************************************/
 
+
+Usage
+export the component called PannableMenu
+that you can use to add a left component.
+
 <View>
-<PannableMenu
- isOpened={true}
- onCloseThisByGesture={()=> this.func}
- leftComponent={this.component}
- lockGesture={false}
-/>
-
-<Text>Hello world</Text>
-
+ <PannableMenu
+  isOpened={true}
+  onCloseThisByGesture={()=> this.func}
+  leftComponent={this.component}
+  lockGesture={false}
+ />
+ 
+ /* define components whatever you like */
+ <Text>Hello world</Text>
+ <Button title={press me} onPress={} />
 </View>
