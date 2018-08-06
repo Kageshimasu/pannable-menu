@@ -13,10 +13,11 @@
 /********************************************************************/
 
 
-Usage
+/* Usage */
 export the component called PannableMenu
 that you can use to add a left component.
 
+/* For example */
 <View>
  <PannableMenu
   isOpened={true}
