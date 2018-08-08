@@ -19,14 +19,15 @@ that you can use to add a left component.
 
 /* For example */
 <View>
- <PannableMenu
+ <PannableView
   isOpened={true}
   onCloseThisByGesture={()=> this.func}
   leftComponent={this.component}
   lockGesture={false}
- />
+ >
  
  /* define components whatever you like */
  <Text>Hello world</Text>
  <Button title={press me} onPress={} />
+ </PannableView>
 </View>
