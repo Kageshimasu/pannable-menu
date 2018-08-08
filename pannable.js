@@ -15,13 +15,13 @@ var Dimensions = require('Dimensions');
 const {width, height} = Dimensions.get('window');
 
 /********************************************************************/
-/*                          PannableMenu                            */
+/*                          PannableView                            */
 /* props: isOpend                   -> true/false if it's opened    */
 /*        onCloseThisByGesture      -> function when being closed   */
 /*        leftComponent             -> component after u gestured   */
 /*        lockGesture               -> true/false if u wanna lock   */
 /********************************************************************/
-export default class PannableMenu extends Component {
+export default class PannableView extends Component {
     constructor(props) {
         super(props)
 
@@ -64,6 +64,7 @@ export default class PannableMenu extends Component {
         })
     }
     
+    /* 新しく値を受けたとき、メニューを開く */
     componentWillReceiveProps(props) {
         if(props.isOpened) {
             this.openLibrary()
@@ -86,6 +87,7 @@ export default class PannableMenu extends Component {
         this.setState({
             menuLayout: {width: 0, height: height},
         })
+        // 閉じるアニメーションをコールバック
         this.props.onCloseThisByGesture()
     }
     
@@ -139,8 +141,9 @@ export default class PannableMenu extends Component {
 
     render() {
         return (
-        <View>
+        <View style={{flexDirection: 'row'}}>
             {this.renderMenu()}
+            {this.props.children}
         </View>
         )
     }
