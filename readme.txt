@@ -12,6 +12,7 @@
 /*        lockGesture               -> true/false if u wanna lock   */
 /********************************************************************/
 
+テストであげました
 
 /* Usage */
 export the component called PannableMenu
